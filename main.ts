@@ -75,9 +75,15 @@ async function main(): Promise<void> {
     throw new Error('the server did not bind an ephemeral TCP port');
   }
   process.stdout.write(`[entry] listening on port ${address.port}\n`);
+  // The env may end a trial by killing the process; shut the server down cleanly.
+  process.on('SIGTERM', () => {
+    server.close();
+    process.exit(0);
+  });
   if (ENV_URL === '') {
     // Local development: no env to register with, just serve until killed.
     process.stdout.write('[entry] no MAKEFUN_ENV_URL set: serving locally, no register/done loop\n');
+    await new Promise<void>(() => {});
     return;
   }
   await register(address.port);
