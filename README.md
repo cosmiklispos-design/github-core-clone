@@ -1,3 +1,7 @@
+[![make.fun](https://make.fun/badge/github-core-clone-01.svg)](https://make.fun/bounty/github-core-clone-01)
+[![Rank](https://make.fun/badge/github-core-clone-01/cosmiklispos-design/github-core-clone/rank.svg)](https://make.fun/bounty/github-core-clone-01)
+[![Reward](https://make.fun/badge/github-core-clone-01/cosmiklispos-design/github-core-clone/reward.svg)](https://make.fun/bounty/github-core-clone-01)
+
 # github-core-clone
 
 A standalone GitHub-compatible git forge in one Node 22 process, no dependencies,
